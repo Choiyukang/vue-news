@@ -1,13 +1,11 @@
 <template>
   <div>
-      <li v-for="ak in ask" v-bind:key="ak.id">
-    {{ak}}
-  </li>
+    <li v-for="ask in askItems" v-bind:key="ask.id">{{ask}}</li>
   </div>
 </template>
 
 <script>
-import {fetchAskList} from '../api/index.js';
+import { mapGetters, mapState } from 'vuex'
 
 export default {
   data(){
@@ -16,11 +14,11 @@ export default {
     }
   },
 
-  created(){
-    fetchAskList()
-      .then(response => this.ask = response.data)
-      .catch(error => console.log(error));
-  }
+  // created(){
+  //   fetchAskList()
+  //     .then(response => this.ask = response.data)
+  //     .catch(error => console.log(error));
+  // }
 
 computed:{
   ...mapGetters({

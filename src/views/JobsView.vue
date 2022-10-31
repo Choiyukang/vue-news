@@ -1,12 +1,6 @@
 <template>
   <div>
-<<<<<<< HEAD
-    <li v-for="job in jobs" v-bind:key="job.id">
-    {{job}}
-      </li>
-=======
     <li v-for="job in this.$store.state.jobs" v-bind:key="job.id">{{job}}</li>
->>>>>>> 5f14064fc4ca05a5680f180cdce005081d2918bb
   </div>
 </template>
 
