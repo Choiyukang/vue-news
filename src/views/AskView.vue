@@ -1,7 +1,7 @@
 <template>
   <div>
      <p v-for="item in askItems" v-bind:key="item.id">
-    <a v-bind:href="item.url">{{item.title}} </a>
+    <router-link :to="`item/${item.id}`">{{item.title}}</router-link>
     <small> {{item.time_ago}} by {{item.uesr}}</small>
   </p>
   </div>
@@ -26,7 +26,7 @@ computed:{
   // }
 },
  created(){
-  // this.$store.dispatch('FETCH_ASKS')
+  this.$store.dispatch('FETCH_ASKS')
  }
 
 }

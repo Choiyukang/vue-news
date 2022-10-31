@@ -16,7 +16,7 @@
 export default {
   
  created(){
-  this.$store.dispatch('FETCH_NEWS');
+    this.$store.dispatch('FETCH_NEWS');
   }  
   
 }
