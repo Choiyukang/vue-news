@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex';
-import {fetchAskList, fetchJobsList, fetchNewsList} from '../api/index.js';
+import actions from './actions.js';
+import mutations from './mutations.js';
 
 Vue.use(Vuex);
 
@@ -18,41 +19,9 @@ export const store = new Vuex.Store({
         }
     },
     //API호출
-    actions:{
-        FETCH_NEWS(context){
-            fetchNewsList()
-            .then(response => {
-                console.log(response.data)
-                context.commit('SET_NEWS',response.data)
-            })
-            .catch(error => console.log(error))
-        },
-        FETCH_ASKS({commit}){
-            fetchAskList()
-            .then(({data}) => commit('SET_ASKS',data))
-            .catch(error => console.log(error))
-        },
-        FETCH_JOBS({commit}){
-            fetchJobsList()
-            .then(({data}) => {
-                commit('SET_JOBS',data)
-            })
-            .catch(error => console.log(error))
-        }
-
-    },
+    actions:actions,
     //API 호출 데이터 담기
-    mutations:{
-        SET_NEWS(state, news){
-            state.news = news;
-        },
-        SET_ASKS(state, asks){
-            state.asks = asks;
-        },
-        SET_JOBS(state, jobs){
-            state.jobs = jobs;
-        },
-    }
+    mutations:mutations
 });
 
 

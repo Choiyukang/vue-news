@@ -1,6 +1,9 @@
 <template>
   <div>
-    <li v-for="ask in askItems" v-bind:key="ask.id">{{ask}}</li>
+     <p v-for="item in askItems" v-bind:key="item.id">
+    <a v-bind:href="item.url">{{item.title}} </a>
+    <small> {{item.time_ago}} by {{item.uesr}}</small>
+  </p>
   </div>
 </template>
 
@@ -23,7 +26,7 @@ computed:{
   // }
 },
  created(){
-  this.$store.dispatch('FETCH_ASKS')
+  // this.$store.dispatch('FETCH_ASKS')
  }
 
 }
