@@ -4,14 +4,13 @@ export default{
     FETCH_NEWS(context){
             fetchNewsList()
             .then(response => {
-                console.log(response.data)
                 context.commit('SET_NEWS',response.data)
             })
             .catch(error => console.log(error))
         },
-        FETCH_ASKS({commit}){
+        FETCH_ASK({commit}){
             fetchAskList()
-            .then(({data}) => commit('SET_ASKS',data))
+            .then(({data}) => commit('SET_ASK',data))
             .catch(error => console.log(error))
         },
         FETCH_JOBS({commit}){

@@ -1,39 +1,42 @@
-import Vue from 'vue';
-import VueRouter from 'vue-router';
-import NewsView from '../views/NewsView.vue'
-import AskView from '../views/AskView.vue'
-import JobsView from '../views/JobsView.vue'
-import ItemView from '../views/ItemView.vue'
-import UserView from '../views/UserView.vue'
+import Vue from "vue";
+import VueRouter from "vue-router";
+import NewsView from "../views/NewsView.vue";
+import AskView from "../views/AskView.vue";
+import JobsView from "../views/JobsView.vue";
+import ItemView from "../views/ItemView.vue";
+import UserView from "../views/UserView.vue";
 
 Vue.use(VueRouter);
 
 export const router = new VueRouter({
-    mode:'history',
-    routes:[
-        {
-            path:'/',
-            redirect:'/news',
-        },
-        {
-            path:'/news', //url 주소
-            component: NewsView, // url 주소로 갔을 때 표시될 컴포넌트
-        },
-        {
-            path:'/ask',
-            component:AskView,
-        },
-        {
-            path:'/jobs',
-            component: JobsView,
-        },
-                {
-            path:'/user/:id',
-            component: UserView,
-        },
-        {
-            path:'/item/:id',
-            component: ItemView,
-        }
-    ]
+  mode: "history",
+  routes: [
+    {
+      path: "/",
+      redirect: "/news",
+    },
+    {
+      path: "/news", //url 주소
+      name: "news",
+      component: NewsView, // url 주소로 갔을 때 표시될 컴포넌트
+    },
+    {
+      path: "/ask",
+      name: "ask",
+      component: AskView,
+    },
+    {
+      path: "/jobs",
+      name: "jobs",
+      component: JobsView,
+    },
+    {
+      path: "/user/:id",
+      component: UserView,
+    },
+    {
+      path: "/item/:id",
+      component: ItemView,
+    },
+  ],
 });

@@ -10,18 +10,18 @@ Vue.use(Vuex);
 export const store = new Vuex.Store({
     state:{
         news:[],
-        asks:[],
+        ask:[],
         jobs:[],
         user:{},
         item:[],
     },
     getters:{
-        fetchedAsk(state){
-            return state.asks;
-        },
-        fetchedItem(state){
-            return state.item;
-        }
+        // fetchedAsk(state){
+        //     return state.asks;
+        // },
+        // fetchedItem(state){
+        //     return state.item;
+        // }
     },
     //API호출
     actions:actions,
