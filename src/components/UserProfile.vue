@@ -3,20 +3,28 @@
         <div>
           <i class="fas fa-user"></i>
         </div>
-        <!-- <div class="user-description">
-          <router-link :to="`user/${fetchedItem.user}`">{{fetchedItem.user}}></router-link>
+        <div class="user-description">
+          <div class="">{{info.id}}</div>
+          <!-- <router-link :to="`user/${userInfo.user}`">{{userInfo.id}}></router-link> -->
            <div class="time">
-            {{fetchedItem.time_ago}}
+            {{info.created}}
           </div>
         </div>
        
-        <h2>{{fetchedItem.title}}</h2> -->
+        <h2>{{info.title}}</h2>
       </div>
 </template>
 
 <script>
 export default {
-
+  props:{
+    info: Object,
+  },
+ computed: {
+    userInfo() {
+      return this.$store.state.user;
+    },
+  },
 }
 </script>
 
