@@ -1,10 +1,10 @@
 <template>
   <div>
-    <UserProfile :info="userInfo"></UserProfile>
-    <!-- <p>name : {{ userInfo.id }}</p>
-    <p>karma : {{ userInfo.karma }}</p>
-    <p>created : {{ userInfo.created }}</p> -->
-    <!-- <p>{{this.$store.state.user.about}}</p> -->
+    <UserProfile :info="userInfo">
+      <div slot="username">{{userInfo.id}}</div>
+      <template slot="time">{{userInfo.created}}</template>
+      <div slot="karma">{{userInfo.karma}}</div>
+    </UserProfile>
   </div>
 </template>
 

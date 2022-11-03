@@ -4,11 +4,17 @@
           <i class="fas fa-user"></i>
         </div>
         <div class="user-description">
-          <div class="">{{info.id}}</div>
-          <!-- <router-link :to="`user/${userInfo.user}`">{{userInfo.id}}></router-link> -->
-           <div class="time">
-            {{info.created}}
-          </div>
+
+            <solt name="username">
+              <!-- 상위컴포넌트에서 정의할 영역 -->
+            </solt>
+
+            <solt name="time">
+                <!-- 상위컴포넌트에서 정의할 영역 -->
+            </solt>
+            <solt name="karma">
+
+            </solt>
         </div>
        
         <h2>{{info.title}}</h2>
