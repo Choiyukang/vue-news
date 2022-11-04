@@ -48,16 +48,19 @@ export default {
   //   }
   // },
   computed: {
-    listItems: function () {
-      const name = this.$route.name;
-      if (name === "news") {
-        return this.$store.state.news;
-      } else if (name === "ask") {
-        return this.$store.state.ask;
-      } else {
-        return this.$store.state.jobs;
-      }
-    },
+    // listItems: function () {
+    //   const name = this.$route.name;
+    //   if (name === "news") {
+    //     return this.$store.state.news;
+    //   } else if (name === "ask") {
+    //     return this.$store.state.ask;
+    //   } else {
+    //     return this.$store.state.jobs;
+    //   }
+    // },
+    listItems(){
+      return this.$store.state.list
+    }
   },
 };
 </script>
