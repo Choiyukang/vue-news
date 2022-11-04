@@ -5,16 +5,16 @@
         </div>
         <div class="user-description">
 
-            <solt name="username">
+            <slot name="username">
               <!-- 상위컴포넌트에서 정의할 영역 -->
-            </solt>
+            </slot>
 
-            <solt name="time">
+            <slot name="time">
                 <!-- 상위컴포넌트에서 정의할 영역 -->
-            </solt>
-            <solt name="karma">
+            </slot>
+            <slot name="karma">
 
-            </solt>
+            </slot>
         </div>
        
         <h2>{{info.title}}</h2>

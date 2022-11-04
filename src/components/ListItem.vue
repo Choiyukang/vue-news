@@ -1,7 +1,7 @@
 <template>
   <div class="">
     <ul class="news-list">
-      <li v-for="item in listItems" v-bind:key="item.id" class="post">
+      <li v-for="item in listItems" :key="item.id" class="post">
         <!-- 포인트영역 -->
         <div class="points">
           {{ item.points || 0 }}
@@ -37,16 +37,16 @@
 
 <script>
 export default {
-  created() {
-    const name = this.$route.name;
-    if (name === "news") {
-      this.$store.dispatch("FETCH_NEWS");
-    } else if (name === "ask") {
-      this.$store.dispatch("FETCH_ASK");
-    } else if (name === "jobs") {
-      this.$store.dispatch("FETCH_JOBS");
-    }
-  },
+  // created() {
+  //   const name = this.$route.name;
+  //   if (name === "news") {
+  //     this.$store.dispatch("FETCH_NEWS");
+  //   } else if (name === "ask") {
+  //     this.$store.dispatch("FETCH_ASK");
+  //   } else if (name === "jobs") {
+  //     this.$store.dispatch("FETCH_JOBS");
+  //   }
+  // },
   computed: {
     listItems: function () {
       const name = this.$route.name;
