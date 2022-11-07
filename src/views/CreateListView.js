@@ -7,7 +7,6 @@ export default function createListView(name) {
     name: name,
     created(){
       bus.$emit("start:spinner");
-      setTimeout(() => {
         this.$store
           .dispatch("FETCH_LIST", this.$route.name)
           .then(() => {
@@ -18,7 +17,6 @@ export default function createListView(name) {
             console.log("error");
             bus.$emit("end:spinner");
           });
-      }, 3000);
     },
     render(createElement) {
       return createElement(ListView);
