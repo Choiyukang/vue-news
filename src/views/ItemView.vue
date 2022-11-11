@@ -7,7 +7,7 @@
         {{fetchedItem.user}}
         </router-link>
         <div slot="time">
-            {{'Posted'+fetchedItem.time_ago}}
+            {{'Posted'+fetchedItem.time_ago}}   
         </div>
       </UserProfile>
       <section>
