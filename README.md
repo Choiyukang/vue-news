@@ -27,3 +27,6 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ### domain
 https://luxury-kheer-795012.netlify.app/news
+
+### 배포 참고 
+https://cli.vuejs.org/guide/deployment.html#vercel
